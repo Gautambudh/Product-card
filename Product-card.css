@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* ******************* making container which contains card ***************** */
+.container {
+    justify-content: center;
+}
+.hero-section {
+    padding: 10rem 0;
+    width: max-content;
+}
+/* ****************** Styling image in card **************************** */
+.image-section img {
+    height: 65vh;
+    width:100%;
+}
+
+/* ************************** card body ********************************* */
+
+.text-section {
+    flex-direction: column;
+    background-color: white;
+    justify-content: space-evenly;
+}
+.card-tag {
+    align-items: center;
+    letter-spacing: 6px;
+    color: rgb(155, 155, 155);
+}
+.card-title h1 {
+    font-family: Montserrat;
+    font-weight: 700;
+    color:  rgb(22, 43, 65);
+}
+.card-text {
+    color: rgb(155, 155, 155) ;
+    font-family: Fraunces;
+    font-size: 14px;
+}
+.price {
+    flex-direction: column;
+    /* align-items: flex-end; */
+}
+.price h3 {
+    font-size: 2.5rem;
+    color: green;
+}
+.price p {
+    color: rgb(155, 155, 155) ;
+    font-size: 1rem;
+    text-decoration: line-through;
+}
+/* *********** shopping icon *********/
+i {
+    padding: 0 0.5rem;
+}
+/* ********** Button *************** */
+.btn {
+    justify-content: center;
+    width: 100%;
+    /* margin: 2rem 0; */
+    height: 3.5rem;
+    align-items: center;
+}
+
+/* ****************** Reusable code for display-->flex  ************* */
+.container, .text-section, .card-tag, .price, .btn {
+    display: flex;
+}
+
+/* ************* Media queries for (min-width) --> 1024px ************ */
+@media screen and (min-width:1024px) {
+    .hero-section {
+        padding: 10rem 6.6rem;
+        margin: 0 4rem;
+        width: 60%;
+    }
+    .image-section img{
+        border-end-start-radius: 0.5rem;
+        border-start-start-radius: 0.5rem;
+    }
+    .text-section {
+        border-top-right-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+    }
+}
+
+/* ************* Media queries for (max-width) --> 450px mobile-view  ************ */
+@media screen and (max-width:450px) {
+    .image-section img {
+        height: 45vh;
+        width: 100%;
+        border-start-start-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+    }
+    .hero-section {
+        padding: 1rem 1rem;
+    }
+    .text-section {
+        height: 58%;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+    }
+    .btn {
+        height: 2.3rem;
+    }
+    
+}
+
